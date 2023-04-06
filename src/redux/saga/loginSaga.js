@@ -41,14 +41,14 @@ function* loginSagaFunction(_data) {
             yield put({ type: USER_DATA, data: res })
             dispatch(setLoader({ loader: false }))
             // yield put({ type: FOR_LOADER, loader: false  })
-            showMessage({ message: res.message, type: 'success', position: "bottom" });
+            // showMessage({ message: res.message, type: 'success', position: "bottom" });
         }
     } catch (error) {
         yield put({ type: USER_DATA, data: error })
         const dispatch = _data.payload.dispatch;
         dispatch(setLoader({ loader: false }))
         // yield put({ type: FOR_LOADER, loader: false  })
-        showMessage({ message: error, type: 'danger', position: "bottom" });
+        // showMessage({ message: error, type: 'danger', position: "bottom" });
     }
 }
 

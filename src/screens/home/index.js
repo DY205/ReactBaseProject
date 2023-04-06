@@ -44,18 +44,19 @@ const Home = (props) => {
   useEffect(() => {
     NetInfo.fetch().then(state => {
       if (state.isConnected) {
-        loginAction()
+        // loginAction()
+
       } else {
         showMessage({ message: NO_INTERNET, type: 'danger', position: "bottom" });
       }
     });
   }, [])
 
-  useEffect(() => {
-    if (getLoaderRes) {
-      setLoading(getLoaderRes.loader)
-    }
-  }, [getLoaderRes]);
+  // useEffect(() => {
+  //   if (getLoaderRes) {
+  //     setLoading(getLoaderRes.loader)
+  //   }
+  // }, [getLoaderRes]);
 
   useEffect(() => {
     if (getUserData) {

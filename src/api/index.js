@@ -38,7 +38,7 @@ const responseBlob = (
     const error = response.PWERROR;
     const MBResponse = dataBlob[link];
     if (!_.isEmpty(error)) {
-        showMessage({ message: error[`${link}`]?.Row?.Message ?? 'Something went wrong.', type: 'danger', position: "bottom" });
+        // showMessage({ message: error[`${link}`]?.Row?.Message ?? 'Something went wrong.', type: 'danger', position: "bottom" });
         reject(error);
         return;
     }
